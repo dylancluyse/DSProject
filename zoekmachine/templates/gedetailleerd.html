@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bedrijf</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+</head>
+<body>
+    <div id="title"></div>
+    <div id="containerDetails">
+        <table id="bedrijfDetails">
+            <tr>
+                <td>Naam</td>
+                <td id="naamtab" class="rightalign"></td>
+              </tr>
+            <tr>
+                <td>Sector</td>
+                <td id="sectortab" class="rightalign"></td>
+            </tr>
+            <tr>
+                <td>Ondernemingsnummer</td>
+                <td id="ondertab" class="rightalign"></td>
+            </tr>
+            <tr>
+                <td>Adres</td>
+                <td id="adrestab" class="rightalign"></td>
+            </tr>
+            <tr>
+                <td>Aantal werknemers</td>
+                <td id="aantalwerktab" class="rightalign"></td>
+            </tr>
+            <tr>
+                <td>Omzet</td>
+                <td id="omzettab" class="rightalign"></td>
+            </tr>
+            <tr>
+                <td>Balanstotaal</td>
+                <td id="balanstab" class="rightalign"></td>
+            </tr>
+            <tr>
+                <td>Framework</td>
+                <td id="frametab" class="rightalign"></td>
+            </tr>
+            <tr>
+                <td>B2B/B2C</td>
+                <td id="btwotab" class="rightalign"></td>
+            </tr>
+            <tr>
+                <td>Duurzaamheidsrapportering - percentage </td>
+                <td id="duurzaamperctab" class="rightalign"></td>
+            </tr>
+            <tr>
+                <td>Duurzaamheidsrapportering - score</td>
+                <td id="duurzaamscoretab" class="rightalign"></td>
+            </tr>
+        </table>
+      </div>
+      <a type="button" id="back">
+          <button type="button" class="btnGedetailleerd">Terug</button>
+      </a>
+      <a href="/">
+          <button type="button" class="btnGedetailleerd">Home</button>
+      </a>
+      
+    <script>localStorage.setItem("Bedrijfsinfo", "{{response}}")</script>  <!-- Data in localstorage plaatsen -->
+    <script src="{{url_for('static', filename='js/gedetailleerd.js')}}" type="text/javascript"></script>  <!-- Verwijzen naar js-file -->
+</body>
+</html>
